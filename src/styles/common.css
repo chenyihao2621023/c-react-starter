@@ -1,0 +1,257 @@
+@charset "utf-8";
+/*删除网页自带样式*/
+*{ margin:0;padding:0;box-sizing: border-box;}
+div,dl,dt,dd,form,h1,h2,h3,h4,h5,h6,img,ol,ul,li,table,th,td,p,span,a{border:0;}
+img,input{border:none;vertical-align:middle;}
+ul,ol{list-style-type:none;}
+ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,input,button {
+  margin: 0;
+  padding: 0;
+}
+/*网页整体更新布局样式*/
+body {
+  margin:0;
+  font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,"sans-serif";
+  font-size: 14px;
+  color:#2a2d31;
+  background: #fff;
+}
+.lt{
+  float: left;
+}
+.rt{
+  float:right;
+}
+.clear:after{
+  content:'';
+  display: table;
+  clear:both;
+}
+.bold {
+  font-weight: bold;
+}
+/*a{color: #333;text-decoration: none;}*/
+/*a:hover{color: #e4393c;text-decoration: none;}*/
+/*.img-responsive{width: 100%;height: auto;display: block;}*/
+/**/
+.indexUserState {  transition: transform 1s;  display: flex;
+  }
+  .indexSections{  width:60px;  background-color:#252d3a;  position:fixed;  top:0;  left:0;
+  }
+  .indexSections.pink {  background-color:#da434e;
+  }
+  .indexSections.green { background-color:#4aab71; }
+  .indexSections>div{  width:60px;  height:60px;  background-color: #278bf1;  display:table-cell;  vertical-align:middle;  text-align: center;
+  }
+  .indexSections>div.pink {  background-color: #da434e
+  }
+  .indexSections>div.green {  background-color: #4aab71
+  }
+  .indexSections>div>img{  width:80%;
+  }
+  .section{  height:60px;  line-height:60px;  text-align: center;
+  }
+  .section>i{  font-size:22px;
+  }
+  .section.pink>i{  font-size:22px;  color: #F79D9D;
+  }
+  .section.green>i{  font-size:22px;  color: #7ec59a;
+  }
+  .section.pink:hover,.section.pink.active {  background-color: #cb3f3f;
+  }
+  .section.green:hover,.section.green.active {  background-color: #3da065;
+  }
+  /*左侧黑条选项点击效果*/
+  .section:hover,.section.active{  background-color: #343d4d;
+  }
+  .section:hover .iconfont,.section.active .iconfont{  color:#fff;
+  }
+  .iconfont{  color:#4e5c6f;  font-size:18px;
+  }
+  .section.section-last1 ,.section.section-last2{  position:absolute;  left:0;  width:100%;
+  }
+  .section.section-last1{  bottom: 0;
+  }
+  .section.section-last2{  bottom: 60px;
+  }
+  /*登陆之后，首页黑条右侧模块的样式*/
+  .indexRight{  margin-left:60px;  overflow-y:hidden;
+  }
+  /*登陆之后，首页黑条右侧模块抬头的样式*/
+  .indexTitle{  position:relative;  box-sizing: border-box;  height:60px;  line-height:60px;  border-bottom: 1px solid #d8dfe9;  padding-left:25px ;  padding-right:25px;  }
+  .indexTitleUser{  position:absolute;  top:0;  right:0;
+  }
+  .indexTitleUser>li{  float:left;  text-align:center;  margin:0 9px;
+  }
+  .indexTitleUser>li:first-child{  margin-right:18px;
+  }
+  .indexTitleUser>li:last-child{  margin-right:30px;
+  }
+  .indexTitleUser .iconfont{  font-size:22px;
+  }
+  .indexTitleUser i, .indexTitleUser span{  display:block;  color:#7a818f;
+  }
+  .indexTouxiang{  width:24px;  height:24px;  border-radius:50%;
+  }
+  .indexTouxiang>img{  width:100%;
+  }
+  .iconfont.icon-zhuangtai{  font-size:10px;
+  }
+  .toup{  transform: rotate(-180deg);  transform-origin:50% 40%;
+  }
+  .indexTitleUser .el-badge__content.is-fixed{  font-size:10px;  height:16px;  line-height:16px;  padding:0 5px;  top:27px;  right:9px;
+  }
+  .indexTitleUser  .iconfont.icon-tongzhi{  font-size:18px;  margin-top:4px;
+  }
+  .indexTitleUser .el-dropdown{  font-size:12px;
+  }
+  .indexTitle .app-shotcut-icon{  margin-left:20px;  color:#7a818f;
+  }
+  /*共有样式提取*/
+  /*分页标签样式 参考会话分配样式*/
+  /*调整标签页 抬头标题的位置*/
+  .set-dialogDis-tag{  padding-top:28px;
+  }
+  .set-dialogDis-tag .el-tabs__header{  padding-left:30px;  margin-bottom:0;
+  }
+  /*调整标签页头部蓝条*/
+  /*.set-dialogDis-tag  .el-tabs--card>.el-tabs__header .el-tabs__item.is-active{*/
+  /*border-top:3px solid #278bf1;*/
+  /*box-sizing:border-box;*/
+  /*}*/
+  /*.set-dialogDis-tag .el-tabs--card>.el-tabs__header .el-tabs__item{*/
+  /*border-top:3px solid transparent;*/
+  /*box-sizing:border-box;*/
+  /*min-width:80px;*/
+  /*text-align: center;*/
+  /*}*/
+  /*.set-dialogDis-tag .el-tabs-item{*/
+  /*box-sizing: content-box;*/
+  /*}*/
+  .set-dialogDis-tag .el-tabs__content{  padding-left:50px;
+  }
+  /*共有样式提取*/
+  /*左侧竖排导航标签 和 右侧内容的 样式及布局 参考设置setting.vue*/
+  .setting-container{  height:100%;  min-width:1200px;
+  }
+  .setting-left{  width:13%;  height:100%;  overflow-y: auto;  background-color: #f6f7fb;
+  }
+  .setting-right{  width:87%;
+  }
+  /*左侧导航标签滚动条样式*/
+  /*滚动条部分调整*/
+  .scrollbar::-webkit-scrollbar{  width: 8px;  height: 8px;  background-color: #fff;
+  }
+  /*定义滚动条的轨道，内阴影及圆角*/
+  .scrollbar::-webkit-scrollbar-track{  ;  border-radius: 10px;  background-color: #fff;
+  }
+  /*定义滑块，内阴影及圆角*/
+  .scrollbar::-webkit-scrollbar-thumb{
+    /*width: 10px;*/  height: 20px;  border-radius: 10px;  ;  background-color: #c7ccd7;
+  }
+  /*子页面分布设置*/
+  .setgroup-title{  height:70px;  line-height: 70px;  box-sizing: border-box;  border-bottom:1px solid #d8dfe9;  padding-left:30px;  font-size: 16px;
+  }
+  /*调整模态框大小*/
+  .set-account-dialog .el-dialog--small{  width:606px;  }
+  .set-account-dialog .el-dialog__header{  margin:0 30px;  padding:0;  height:70px;  line-height:70px;  border-bottom:1px solid #d8dfe9;  }
+  .set-account-dialog .el-dialog__body{  padding:30px 50px;  }
+  .set-account-dialog .el-form-item__label{  text-align:left;  }
+  .set-account-dialog div.el-select{  width:390px;  }
+  .set-account-dialog div.el-input{  width:390px;  }
+  .set-account-dialog .el-dialog__footer{ padding:0 30px 30px 30px;}
+  .set-account-dialog .set-dialog-add{ border:1px solid #d8dfe9; }
+  /*左树右列表的结构*/
+  /*左树右列表 的结构*/
+  .setgroup-content{
+    position:relative;
+  }
+  .set-content-left{  width:240px;  position:absolute;  top:0;  left:0;
+  }
+  .set-content-right{  padding-left:240px;  width:100%;  box-sizing:border-box;
+  }
+  .set-content-right>div{  padding-right:20px;
+  }
+  .set-content-right .el-table--fit{  border-right:1px;
+  }
+  .set-account-tree-add>span{  line-height:69px;  margin-left:30px;
+  }
+  .set-account-tree-add{  position: relative;
+  }
+  .set-account-tree-add>button{ margin-top:17px; position:absolute; right:30px;
+  }
+  .set-account-tree>.el-tree{  border-top:transparent;  border-left:transparent;  border-right:1px solid #d8dfe9;  height:100%;
+  }
+  .set-account-tree>div{  padding-left:20px;  padding-top:20px;  min-width:210px;  border-right: 1px solid #d8dfe9;box-sizing: border-box;
+  }
+  .set-content-left>div:first-child{  height:70px; line-height: 70px; border-right:1px solid #d8dfe9;  border-bottom:1px solid #d8dfe9;  box-sizing: border-box;
+  }
+  .set-content-right>div:first-child{  height:70px;  border-bottom:1px solid #d8dfe9;  box-sizing: border-box;
+  }
+  .set-account-table{  padding-top:20px;  padding-left:20px;  overflow-y: auto; box-sizing: border-box;
+  }
+  /*计数器居中显示*/
+  .el-input-number.el-input-number--small,.el-color-picker{ vertical-align: middle;
+  }
+  /*20170628 渠道-网站聊窗 调整 栅格布局 文字对齐方式，主要是上下对齐方式（渠道评价页面需）*/
+  /*当右侧是input组件时*/
+  .webChatWindow-adjust-input{  height:36px;  line-height:36px;
+  }
+  /*当右侧是color组件时*/
+  .webChatWindow-adjust-color{  height:30px;  line-height:30px;
+  }
+  /*当右侧是counter组件时*/
+  .webChatWindow-adjust-counter{  height:30px;  line-height:30px;
+  }
+  /*删除图标 拖拽图标 的 手型*/
+  .iconfont.icon-tuozhuai:hover{cursor:move}
+  .iconfont.icon-yuanxingshanchu:hover{cursor:pointer}
+  /*标题 14号字 行高70 文字加粗*/
+  .inner-title{height: 70px;  line-height: 70px;  border-bottom: 1px solid #d8dfe9;  -webkit-box-sizing: border-box; font-weight : bold; box-sizing: border-box;}
+  /*颜色选择器的样式 变小一点*/
+  .indexContainer .el-color-picker__trigger{
+    height:30px;
+    padding:3px;
+  }
+/* 所有的 树 “全部”标签 不能有修改删除功能*/
+.set-account-tree>div.tree-node>div:first-child .el-button-group{display:none;}
+/*所有模态框 关闭X 的位置*/
+.el-dialog__close.el-icon.el-icon-close{line-height:70px;}
+/*左树右列表结构 中 模态框  中 el-textarea 的宽度*/
+.set-account-dialog .el-textarea{
+  vertical-align: middle;
+  width:390px;
+}
+/*左树右列表结构 中 模态框  中 下拉树 的结构*/
+.select-tree{
+  display: inline-block;
+}
+.select-tree>.tree-node{
+  width:390px;
+  background-color: #fff;
+  border:1px solid #d8dfe9;
+  box-sizing:border-box;
+  margin-top:5px;
+}
+.select-tree>.tree-node .el-button-group{
+  display:none;
+}
+.select-tree input{
+  padding-right:35px;
+}
+.select-tree .el-input__icon.el-icon-caret-bottom{
+  transition: transform .3s;
+  -ms-transform: translateY(-50%) rotateZ(0deg);
+  transform: translateY(-50%) rotateZ(0deg);
+  cursor: pointer;
+  top:50%;
+}
+.select-tree .el-input__icon.el-icon-caret-bottom.is-reverse{
+  -ms-transform: translateY(-50%) rotateZ(180deg);
+  transform: translateY(-50%) rotateZ(180deg);
+}
+/*表格的样式 height*/
+.indexContainer .el-table td, .indexContainer .el-table th{height:60px}
+
+/*分页 的位置*/
+.el-pagination {float:right;margin:30px 0; }
