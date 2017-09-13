@@ -3,6 +3,7 @@ const utils = require('./utils');
 const config = require('../config');
 const pages = require('../config/pages');
 const autoprefixer = require('autoprefixer');
+
 const entry = {};
 pages.forEach((page) => {
     entry[page.entry.key] = page.entry.file;
@@ -32,8 +33,8 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
-                include: [resolve('src'),resolve('utils')],
-                exclude: /node_modules/
+                include: [resolve('src'), resolve('utils')],
+                exclude: /node_modules/,
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

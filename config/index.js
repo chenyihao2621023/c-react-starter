@@ -19,13 +19,13 @@ module.exports = {
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         proxyTable: {
-          '/elementCss': {
-            target: 'http://120.27.26.207:8080/chatbotFile',
-            changeOrigin: true,
-            pathRewrite: {
-              '^/elementCss': '/elementCss'
-            }
-          },
+            '/elementCss': {
+                target: 'http://120.27.26.207:8080/chatbotFile',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/elementCss': '/elementCss',
+                },
+            },
         },
         cssSourceMap: false,
     },

@@ -24,11 +24,11 @@ exports.cssLoaders = (options) => {
         const loaders = [cssLoader];
         if (loader) {
             loaders.push({
-              loader: 'postcss-loader',
-              options: Object.assign({}, loaderOptions, {
-                  sourceMap: options.sourceMap,
-              }),
-            })
+                loader: 'postcss-loader',
+                options: Object.assign({}, loaderOptions, {
+                    sourceMap: options.sourceMap,
+                }),
+            });
             loaders.push({
                 loader: `${loader}-loader`,
                 options: Object.assign({}, loaderOptions, {
@@ -54,7 +54,7 @@ exports.cssLoaders = (options) => {
         sass: generateLoaders('sass', { indentedSyntax: true }),
         scss: generateLoaders('sass'),
         stylus: generateLoaders('stylus'),
-        styl: generateLoaders('stylus')
+        styl: generateLoaders('stylus'),
     };
 };
 
@@ -68,7 +68,6 @@ exports.styleLoaders = (options) => {
                 test: new RegExp(`\\.${extension}$`),
                 use: loader,
             });
-
         }
     }
     // output.push({
