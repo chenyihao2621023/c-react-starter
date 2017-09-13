@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import './styles/app.styl'
 import './styles/app.styl';
 // App can't be stateless component
 export default class App extends Component {
@@ -13,7 +12,7 @@ export default class App extends Component {
     render() {
         return (
             <div className="app">
-            hello World222
+            hello World
           </div>
         );
     }
